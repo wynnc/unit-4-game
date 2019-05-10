@@ -8,54 +8,56 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
 
 
     <title>Crystals Collector</title>
 </head>
 
 <body>
-    <div class="jumbotron">
+    <!-- <div class="jumbotron">
         <h1 class="display-4">Crystals Collector!</h1>
-    </div>
+    </div> -->
     <div class="container">
-        <!-- <div class="row">
+        <div class="row">
             <div class="col-md-4 title">
                 <h2>Crystals Collector!</h2>
             </div>
-        </div> -->
+        </div>
 
         <div class="row">
-            <div class="column">
-                <p class="game instructions">
+            <div class="col-md-6 instructions">
+                <p class="game-instructions">
                     You will be given a random number at the start of the game.
                 </p>
-                <p class="game instructions">
+                <p class="game-instructions">
                     There are four crystals below. By clicking on a crystal you will
                     add a specific amount of points to your total score.
                 </p>
-                <p class="game instructions">
+                <p class="game-instructions">
                     You win the game by matching your total score to random
                     number, you lose the game if your total score goes above
                     the random number.
                 </p>
-                <p class="game instructions">
-                    The value of each crystal is hidden from you until you click on it.
+                <p class="game-instructions">The value of each crystal is hidden from you until you click on it.
                 </p>
-                <p class="game instructions">
-                   Each time when the game starts, the game will change the values of each crystal.
+                <p class="game-instructions">Each time when the game starts, the game will change the values of each
+                    crystal.
                 </p>
             </div>
         </div>
         <div class="row">
-            <div class="col-md-3 randomNumber"></div>
-            <div class="col-md-2 winsLosses"></div>
+            <div class="col-md-3" id="randomNumber">Number:</div>
+            <div class="col-md-2 winsLosses">
+                <div class="row wins">Wins:</div>
+                <div class="row losses">Losses:</div>
+            </div>
         </div>
         <div class="row">
+            <button class="col-md-2 image-button"></button>
+            <!-- <div class="col-md-2 image-holder"></div>
             <div class="col-md-2 image-holder"></div>
-            <div class="col-md-2 image-holder"></div>
-            <div class="col-md-2 image-holder"></div>
-            <div class="col-md-2 image-holder"></div>
+            <div class="col-md-2 image-holder"></div> -->
         </div>
         <div class="row">
             <div class="col-md-4">Your total score is: </div>
