@@ -1,4 +1,4 @@
-/* body{
+ body{
     padding: 0;
     margin: 0;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -6,26 +6,32 @@
 }
 
 .jumbotron{
-    /* float: left; */
-    /* background-color: orange;
+    float: left;
+     background-color: orange;
 }
 .title{
-    /* float: left; */
-    /* background-color: orange;
+    float: left;
+    background-color: orange;
     padding: 20px;
     margin: 20px;
 
-} */
+} 
 
-/* .instructions{
-    /* clear: both; */
-    /* background-color: yellow;
+.instructions{
+    clear: both;
+    background-color: yellow;
     padding: 10px;
-    margin: 20px; */
+    margin: 20px;
 
-/* } */
+}
 
-/* #randomNumber{
-    background-color: green; */
+#randomNumber{
+    background-color: green;
 
-/* } */ 
+}
+
+.image-holder{
+    display: inline;
+    width: 200px;
+    height: 200px;
+}

@@ -1,5 +1,5 @@
 //Create global variables
-
+// alert("Javascript is working!");
 
 var targetScore = 0
 var yourScore = 0
@@ -8,6 +8,11 @@ var losses = 0
 var randomNumber = 0
 
 randomNumber = generateRandom();
+
+function generateRandom(){
+    randomNumber = Math.floor(Math.random() * 10)+ 1;
+    console.log(randomNumber);
+}
 //Create a function on page load that creates random number to hit,
 //generates random crystal values; assigns crytal values to crystals;
 //one of the function needs to generate random number; 
@@ -21,24 +26,28 @@ $(document).ready(function() {
 
 
 
-// var crystalList = [{ src: "images/citrine.jpg", 
-// score: randomNumber},
-// {imgSrc: "images/lepidolite",
-// score: randomNumber},
-// {imgSrc: "images/rhodochrosite.jpg",
-// score: randomNumber},
-// {imgSrc:  "images/shattuckite.jpg",
-// score: randomNumber}]
-//object would have a score, an image a pointer to the crystal image, aka collection of key value pairs. it would be an array of objects
+var crystalList = [{ imgSrc: "assets/images/citrine.jpg", 
+score: Math.floor(Math.random() * 10)+ 1},
+{imgSrc: "assets/images/lepidolite.jpg",
+score: randomNumber},
+{imgSrc: "assets/images/rhodochrosite.jpg",
+score: randomNumber},
+{imgSrc:  "assets/images/shattuckite.jpg",
+score: randomNumber}]
+// object would have a score, an image a pointer to the crystal image, aka collection of key value pairs. it would be an array of objects
 
 
-//    for(vari = 0; i < crystalList.length; i++){
-//         var imgSrc = crystalList[i].imgSrc
-//         var score = crystalList[i].score
+   for(var i = 0; i < crystalList.length; i++){
+        var imgSrc = crystalList[i].imgSrc
+        var score = crystalList[i].score
 
-//         $("#image-holder").append("<img src=" + imgSrc + " width='400px'>");
+        $(".image-holder").append("<img src=" + imgSrc + " width='150px'>");
    
-//     }
+    }
+
+
+
+
 
 
 
