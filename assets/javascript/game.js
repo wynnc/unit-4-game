@@ -11,13 +11,13 @@ var crystalPoints = 0;
 var previousNumber = 0;
 var num
 
-// randomNumber = generateRandom();
+//functions
 
-function generateRandom(){
-    
-    randomNumber = Math.floor(Math.random() * 12)+ 1;
-    
-    if(randomNumber === previousNumber){
+function generateRandom() {
+
+    randomNumber = Math.floor(Math.random() * 12) + 1;
+
+    if (randomNumber === previousNumber) {
         generateRandom();
     }
     previousNumber = randomNumber;
@@ -25,44 +25,65 @@ function generateRandom(){
     return randomNumber;
     // console.log(randomNumber);
 }
+
+function scoreKeeper(score) {
+    userScore = score + userScore;
+    console.log("The score is: " + userScore);
+    $(".yourScore").text(userScore);
+}
+
+
 //Create a function on page load that creates random number to hit,
 //generates random crystal values; assigns crytal values to crystals;
 //one of the function needs to generate random number; 
-$(document).ready(function() {
-    targetScore = (Math.floor(Math.random()* 100 + 19 ));
+// $(document).ready(function () {
+//     targetScore = (Math.floor(Math.random() * 100 + 19));
+//     console.log("The random number is: " + targetScore);
+
+//     $("#random-number").text(targetScore);
+
+// })
+
+function reset() {
+    targetScore = (Math.floor(Math.random() * 100 + 19));
     console.log("The random number is: " + targetScore);
-    
+
     $("#random-number").text(targetScore);
 
-})
+    //Object array that stores images and calls function to create point per Crystal.
+
+    var crystalList = [{
+        imgSrc: "assets/images/citrine.jpg",
+        crystalPoints: generateRandom()
+    },
+    {
+        imgSrc: "assets/images/lepidolite.jpg",
+        crystalPoints: generateRandom()
+    },
+    {
+        imgSrc: "assets/images/rhodochrosite.jpg",
+        crystalPoints: generateRandom()
+    },
+    {
+        imgSrc: "assets/images/shattuckite.jpg",
+        crystalPoints: generateRandom()
+    }]
+    // object would have a score, an image a pointer to the crystal image, aka collection of key value pairs. it would be an array of objects
 
 
-//Object array that stores images and calls function to create point per Crystal.
-
-var crystalList = [{ imgSrc: "assets/images/citrine.jpg", 
-crystalPoints: generateRandom()},
-{imgSrc: "assets/images/lepidolite.jpg",
-crystalPoints: generateRandom()},
-{imgSrc: "assets/images/rhodochrosite.jpg",
-crystalPoints: generateRandom()},
-{imgSrc:  "assets/images/shattuckite.jpg",
-crystalPoints: generateRandom()}]
-// object would have a score, an image a pointer to the crystal image, aka collection of key value pairs. it would be an array of objects
-
-
-   for(var i = 0; i < crystalList.length; i++){
+    for (var i = 0; i < crystalList.length; i++) {
         var imgSrc = crystalList[i].imgSrc
         var crystalPoints = crystalList[i].crystalPoints
-        
-        $(".image-holder").append("<img src=" + imgSrc + " width='150px' onclick='scoreKeeper(" + crystalPoints + ");'>");
-   
-    }
 
-    function scoreKeeper(score){
-        userScore = score + userScore;
-        console.log("The score is: " + userScore);
-        $(".yourScore").text(userScore);
+        $(".image-holder").append("<img src=" + imgSrc + " width='150px' onclick='scoreKeeper(" + crystalPoints + ");'>");
+
     }
+}
+
+
+
+
+
 
 
 
@@ -105,7 +126,7 @@ crystalPoints: generateRandom()}]
 // var score = yourScore + crystalValue;
 //array of crystals loop through dynamically create, the photo use an object, each crystal has multiple pieces of information
 
-    
+
 
 
 
