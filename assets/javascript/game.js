@@ -69,14 +69,14 @@ var targetScore = 0
 	        // $(".image-holder").append("<img src=" + imgSrc + " width='150px'>");
 	        var crystalPoints = crystalList[i].crystalPoints
 	        
-	        $(".image-holder").append("<img src=" + imgSrc + " width='150px' onclick='scoreKeeper(" + crystalPoints + ");'>");
+	        $(".image-holder").append("<img src=" + imgSrc + " width='200px' onclick='scoreKeeper(" + crystalPoints + ");'>");
 	
 	    }
 	
         function scoreKeeper(score) {
             userScore = score + userScore;
             // console.log("The score is: " + userScore);
-            $(".yourScore").text(userScore);
+            $(".yourScore").html("Your total score: " + userScore);
             if (userScore === targetScore) {
                 wins++;
                 $(".wins").text("Wins: " + wins);
@@ -88,13 +88,14 @@ var targetScore = 0
             }
         }
         function reset() {
+            // alert("this is the reset");
             // console.log("this value should be " + isLoaded);
             targetScore = (Math.floor(Math.random() * 100 + 19));
             userScore = 0;
-            $(".yourScore").text(userScore);
+            $(".yourScore").html("Your total score: " + userScore);
             console.log("The random number is: " + targetScore);
         
-            $("#random-number").text(targetScore);
+            $("#randomNumber").text("Number: " + targetScore);
         
             for(var i = 0; i < $(".image.holder").length; i++){
                 $(this).attr("data-crystalValue", generateRandom());

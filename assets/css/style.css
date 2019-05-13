@@ -1,17 +1,18 @@
  body{
-    padding: 0;
+    background-color: #5f2f4e;
+    padding: 10px;
     margin: 0;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 16px;
 }
 
-.jumbotron{
+/* .jumbotron{
     float: left;
      background-color: orange;
-}
+} */
 .title{
     float: left;
-    background-color: orange;
+    background-color:#94697e;
     padding: 20px;
     margin: 20px;
 
@@ -19,14 +20,16 @@
 
 .instructions{
     clear: both;
-    background-color: yellow;
+    background-color: #efede0;
     padding: 10px;
     margin: 20px;
 
 }
 
 #randomNumber{
-    background-color: green;
+    background-color: #cbb97a;
+    margin: 10px;
+    padding: 10px;
 
 }
 
@@ -41,11 +44,13 @@
 }
 
 .yourScore{
-    background-color: gray;
+    background-color: #c4b3bb;
+    margin: 20px;
+    padding: 20px;
 }
 
 .winsLosses, .wins, .losses{
-    background-color: lightblue;
+    background-color: #c4b3bb;
     margin: 10px;
     padding: 10px;
 }
