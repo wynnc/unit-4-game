@@ -30,8 +30,22 @@
 
 }
 
-.image-holder{
+/* .image-holder{
     display: inline;
     width: 200px;
     height: 200px;
+} */
+
+.crystal-image{
+    width: 150px;
+}
+
+.yourScore{
+    background-color: gray;
+}
+
+.winsLosses, .wins, .losses{
+    background-color: lightblue;
+    margin: 10px;
+    padding: 10px;
 }
